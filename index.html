@@ -10,74 +10,41 @@
 <body>
 
     <div class="wrapper">
-        <section class="screen">
+        <section class="screen" aria-live="polite" aria-atomic="true">
             0
         </section>
 
-        <section class="calc-buttons">
+        <section class="calc-buttons" role="group" aria-label="Calculator keys">
             <div class="calc-button-row">
-                <button class="calc-button double">
-                    C
-                </button>
-                <button class="calc-button">
-                    &larr;
-                </button>
-                <button class="calc-button">
-                    &divide;
-                </button>
-            </div>    
+                <button class="calc-button function" data-value="AC" aria-label="All Clear">AC</button>
+                <button class="calc-button function" data-value="±" aria-label="Toggle Sign">±</button>
+                <button class="calc-button function" data-value="%" aria-label="Percent">%</button>
+                <button class="calc-button operator" data-value="÷" aria-label="Divide">÷</button>
+            </div>
             <div class="calc-button-row">
-                <button class="calc-button">
-                    7
-                
-                </button>
-                <button class="calc-button">
-                    8
-                </button>
-                <button class="calc-button">
-                    9
-                </button>
-                <button class="calc-button">
-                    &times;
-                </button>
+                <button class="calc-button" data-value="7">7</button>
+                <button class="calc-button" data-value="8">8</button>
+                <button class="calc-button" data-value="9">9</button>
+                <button class="calc-button operator" data-value="×" aria-label="Multiply">×</button>
             </div>
 
             <div class="calc-button-row">
-                <button class="calc-button">
-                    4
-                </button>
-                <button class="calc-button">
-                    5
-                </button>
-                <button class="calc-button">
-                    6
-                </button>
-                <button class="calc-button">
-                    &minus;
-                </button>
+                <button class="calc-button" data-value="4">4</button>
+                <button class="calc-button" data-value="5">5</button>
+                <button class="calc-button" data-value="6">6</button>
+                <button class="calc-button operator" data-value="−" aria-label="Subtract">−</button>
             </div>
 
             <div class="calc-button-row">
-                <button class="calc-button">
-                    1
-                </button>
-                <button class="calc-button">
-                    2
-                </button>
-                <button class="calc-button">
-                    3
-                </button>
-                <button class="calc-button">
-                    &plus;
-                </button>
+                <button class="calc-button" data-value="1">1</button>
+                <button class="calc-button" data-value="2">2</button>
+                <button class="calc-button" data-value="3">3</button>
+                <button class="calc-button operator" data-value="+" aria-label="Add">+</button>
             </div>
             <div class="calc-button-row">
-                <button class="calc-button triple">
-                    0
-                </button>
-                <button class="calc-button">
-                    &equals;
-                </button>
+                <button class="calc-button double" data-value="0">0</button>
+                <button class="calc-button" data-value=".">.</button>
+                <button class="calc-button operator" data-value="=" aria-label="Equals">=</button>
             </div>
         </section>
     </div>
@@ -85,6 +52,6 @@
 
 
     <script src="script.js"></script>
-    
+
 </body>
 </html>
