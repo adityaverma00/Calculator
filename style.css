@@ -24,72 +24,110 @@ body{
 .wrapper{
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
     color: #232323;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
     background: rgba(255, 255, 255, 0.30);
     border: 1px solid rgba(255, 255, 255, 0.34);
-    flex: basis -400px;
-    height: 540px;
-    padding: 20px 35px;
+    padding: 24px 28px 32px;
+    width: 340px;
 }
 
 .screen{
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(0, 0, 0, 0.65);
     border: 1px solid rgba(255, 255, 255, 0.01);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-    color: #232323;
-    font-size: 35px;
-    overflow: auto;
-    padding: 20px;
+    border-radius: 24px;
+    box-shadow: inset 0 6px 16px rgba(0, 0, 0, 0.35);
+    color: #fff;
+    font-size: 48px;
+    letter-spacing: 1px;
+    min-height: 96px;
+    overflow: hidden;
+    padding: 24px;
     text-align: right;
-    width: 326px;
+}
+
+.calc-buttons{
+    margin-top: 24px;
 }
 
 .calc-button-row{
     display: flex;
-    justify-content: space-between;
-    margin: 5% 0;
+    gap: 16px;
+    margin-bottom: 16px;
 }
 
 .calc-button{
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.01);
-    border-radius: 16px;
-    box-shadow: 0 4px 30 px rgba(35, 35, 35, 0.1);
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50px;
     color: #232323;
-    flex-basis: 20%;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1;
     font-family: inherit;
-    font-size: 24px;
-    height: 65px;
+    font-size: 26px;
+    font-weight: 500;
+    height: 70px;
+    justify-content: center;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+    user-select: none;
 }
 
-.calc-button:last-child{
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.01);
-    border-radius: 16px;
-    box-shadow: 0 4px 30 px rgba(35, 35, 35, 0.1);
-    color: #fff;
-    background: #53052c;
+.calc-button:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
 }
 
 .calc-button:hover{
-    background-color: inherit;
+    transform: translateY(-2px);
 }
 
 .calc-button:active{
-    background-color: #ffef78;
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.65);
 }
 
-.double{
-    flex-basis: 75%;
+.calc-button.function{
+    background: rgba(142, 142, 147, 0.4);
+    color: #000;
+}
+
+.calc-button.function:active{
+    background: rgba(142, 142, 147, 0.55);
+}
+
+.calc-button.operator{
+    background: #ff9f0a;
+    color: #fff;
+}
+
+.calc-button.operator:active{
+    background: #f08c00;
+}
+
+.calc-button.double{
+    flex: 2;
+    justify-content: flex-start;
+    padding-left: 26px;
+}
+
+.calc-button.double::after{
+    content: '';
+}
+
+@media (max-width: 420px){
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    body{
+        align-items: stretch;
+    }
 }
